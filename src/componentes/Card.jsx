@@ -44,11 +44,18 @@ const Card2 = ({ icon, icon2, hoursSr, hoursSs }) => {
 const Card3 = ({ day, icon, desc, maxTemp, minTemp, hours }) => {
   return (
     <div className="card3">
-      <h3>
-        {day} <span>{hours}</span>
-      </h3>
-      <img src={icon} alt="" />
-      <span>{desc}</span>
+      <div className="day">
+        <h3>
+          {day} <span>{hours}</span>
+        </h3>
+      </div>
+      <div className="icon">
+        <img src={icon} alt="" />
+      </div>
+      <div className="desc">
+        <span>{desc}</span>
+      </div>
+
       <div className="temp">
         <h2>{maxTemp}</h2>
         <h2 style={{ color: "gray" }}>{minTemp}</h2>

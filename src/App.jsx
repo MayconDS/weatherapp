@@ -21,6 +21,7 @@ function App() {
       let clima = [];
       let infoCity = [];
       infoCity.push(await getWeather(city));
+
       setWeather(infoCity);
 
       let lon = infoCity.map((item) => item["coord"].lon);

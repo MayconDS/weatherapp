@@ -8,7 +8,13 @@ const getWeather = async (city) => {
     `${API_BASE}q=${city}&appid=${API_KEY}&units=metric`
   );
   const data = await response.json();
-  return data;
+  if (data.cod == 404) {
+    const response = await fetch(
+      `${API_BASE}q=${"Sao Paulo"}&appid=${API_KEY}&units=metric`
+    );
+    const data = await response.json();
+    return data;
+  } else return data;
 };
 
 const getWeather2 = async (lon, lat) => {

@@ -8,22 +8,12 @@ const Forecast = ({ item }) => {
     timeZone: item.daily.timezone,
   });
 
-  var semana = [
-    "Domingo",
-    "Segunda-Feira",
-    "Terça-Feira",
-    "Quarta-Feira",
-    "Quinta-Feira",
-    "Sexta-Feira",
-    "Sábado",
-  ];
-
   return (
     <>
       <div className="forecast">
         {item.daily.map((item) => (
           <Card3
-            day={dayFormatter.format(item.dt)}
+            day={dayFormatter.format(item.dt * 1000)}
             icon={
               item["weather"].map((item) => item.description) == "light rain"
                 ? "https://hweather.netlify.app/weather_icons/10d.png"

@@ -48,10 +48,33 @@ const Today = ({ item }) => {
           {item.hourly.map((item) => (
             <SwiperSlide style={{ flexShrink: "1" }}>
               <Card3
-                icon="https://hweather.netlify.app/weather_icons/01n.png"
-                day={dayFormatter.format(item.dt)}
+                icon={
+                  item["weather"].map((item) => item.description) ==
+                  "light rain"
+                    ? "https://hweather.netlify.app/weather_icons/10d.png"
+                    : item["weather"].map((item) => item.description) ==
+                      "overcast clouds"
+                    ? "https://hweather.netlify.app/weather_icons/04d.png"
+                    : item["weather"].map((item) => item.description) ==
+                      "broken clouds"
+                    ? "https://hweather.netlify.app/weather_icons/04d.png"
+                    : item["weather"].map((item) => item.description) ==
+                      "moderate rain"
+                    ? "https://hweather.netlify.app/weather_icons/10d.png"
+                    : item["weather"].map((item) => item.description) ==
+                      "few clouds"
+                    ? "https://hweather.netlify.app/weather_icons/02d.png"
+                    : item["weather"].map((item) => item.description) ==
+                      "clear sky"
+                    ? "https://hweather.netlify.app/weather_icons/01d.png"
+                    : item["weather"].map((item) => item.description) ==
+                      "scattered clouds"
+                    ? "https://hweather.netlify.app/weather_icons/03d.png "
+                    : ""
+                }
+                day={dayFormatter.format(item.dt * 1000)}
                 graus={item.temp.toFixed(1) + "°"}
-                hours={formatter.format(item.dt)}
+                hours={formatter.format(item.dt * 1000)}
                 desc={item["weather"].map((item) => item.description)}
               />
             </SwiperSlide>
