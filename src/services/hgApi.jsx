@@ -9,12 +9,17 @@ const getWeather = async (city) => {
   );
   const data = await response.json();
   if (data.cod == 404) {
+    document.querySelector("#alert-error").innerText = "Cidade não encontrada";
     const response = await fetch(
       `${API_BASE}q=${"Sao Paulo"}&appid=${API_KEY}&units=metric`
     );
     const data = await response.json();
     return data;
-  } else return data;
+  } else {
+    document.querySelector("#alert-error").innerText = "";
+
+    return data;
+  }
 };
 
 const getWeather2 = async (lon, lat) => {

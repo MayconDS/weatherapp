@@ -12,9 +12,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 const Today = ({ item }) => {
-  const dt = item.hourly.map((item) => item.dt);
-  const date = new Date(dt[0] * 1000);
-
   const formatter = Intl.DateTimeFormat([], {
     hour12: true,
     hour: "numeric",
@@ -73,7 +70,7 @@ const Today = ({ item }) => {
                     : ""
                 }
                 day={dayFormatter.format(item.dt * 1000)}
-                graus={item.temp.toFixed(1) + "°"}
+                maxTemp={item.temp.toFixed(1) + "°"}
                 hours={formatter.format(item.dt * 1000)}
                 desc={item["weather"].map((item) => item.description)}
               />

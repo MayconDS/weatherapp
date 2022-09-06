@@ -60,6 +60,7 @@ function App() {
   return (
     <main className="main">
       <div className="page-left">
+        <span id="alert-error"></span>
         <div className="page-left-search">
           <HiSearch />
           <input
@@ -101,6 +102,9 @@ function App() {
                       : item["weather"].map((item) => item.description) ==
                         "scattered clouds"
                       ? "https://hweather.netlify.app/weather_icons/03d.png "
+                      : item["weather"].map((item) => item.description) ==
+                        "smoke"
+                      ? "https://hweather.netlify.app/weather_icons/50d.png"
                       : ""
                   }
                 />
