@@ -168,7 +168,6 @@ function App() {
 
           <br />
           <div className="highlights">
-            <h1>Today's Highlights</h1>
             <div className="highlights-item">
               {weather2 && weather2.map((item) => <Highlights item={[item]} />)}
             </div>
