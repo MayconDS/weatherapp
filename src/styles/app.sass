@@ -1,0 +1,199 @@
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+
+main
+    display: flex
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after
+    color: #7f7f7f
+
+.page-left
+    background: rgb(35,185,241)
+    background: linear-gradient(180deg, rgba(35,185,241,1) 0%, rgba(17,107,243,1) 100%)
+    height: 100%
+    z-index: 999
+    position: fixed
+    padding: 4rem
+    width: 366px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .page-left-search
+        display: flex
+        align-items: center
+        svg
+            color: #7f7f7f
+            position: fixed
+            left: 40px
+            font-size: 1.4rem
+
+        input
+            transition: all ease 0.3s
+            outline: 0
+            padding: 13px 45px
+            border: none
+            background-color: #f2f2f2
+            border-radius: 5px
+            &:hover
+                background-color: #f8f7f7
+        button
+            transition: all ease 0.3s
+
+            margin-left: 2px
+            padding: 13px 6px
+            border: none
+            border-radius: 3px
+            cursor: pointer
+            &:hover
+                background-color: #f8f7f7
+
+    .page-left-icon
+
+        padding-top: 60px
+        display: flex
+        align-items: center
+        height: 32%
+        img
+
+            width: 260px
+    .page-left-weather-info
+        color: white
+        margin-top: 40px
+        display: flex
+        flex-direction: column
+        margin-right: 57px
+        width: 100%
+
+        .weather-graus
+            display: flex
+            flex-direction: column
+
+            #temp
+                font-weight: 400
+                font-size: 3.1rem
+                line-height: 107px
+            h2
+
+                display: Flex
+                font-size: 6.2rem
+                font-weight: 300
+            h3
+
+                font-weight: 400
+            #gray
+                margin-top: -2rem
+                color: #dbdbdb
+        .weather-city
+            #gray
+                color: #dbdbdb
+
+.page-right
+    display: flex
+    flex: 1
+    margin-left: 366px
+    background: #f6f6f8
+
+    .page-content
+        width: 86%
+        margin: 9vh auto
+        h1
+
+            font-family: 'Space Grotesk'
+            font-size: 1.7rem
+            font-weight: 600
+        .card, .card2
+
+            height: 12rem
+            width: 295px
+            margin-top: 30px
+        .card3
+
+            margin: 5px 6px
+
+@media (max-width: 1300px)
+
+    .page-right
+        .page-content
+            .card,.card2,.card3
+                width: 97%
+@media (max-width: 879px)
+    .page-left
+        width: 35%
+        input
+            width: 220px
+        .page-left-search
+            svg
+                left: 25px
+    .page-right
+        margin-left: 35%
+
+@media (max-width: 849px)
+    .page-left
+        width: 35%
+        input
+            width: 180px
+        .page-left-search
+            svg
+                left: 30px
+@media (max-width: 819px)
+    .page-left
+        width: 35%
+        input
+
+            width: 180px
+        .page-left-search
+            margin-top: 30px
+            svg
+                left: 20px
+
+@media (max-width: 710px)
+    .page-left
+        input
+            width: 150px
+        .page-left-icon
+
+            img
+
+                width: 220px
+        .page-left-search
+            margin-top: 30px
+            svg
+                left: 25px
+
+@media (max-width: 700px)
+    .page-right
+        margin: 0px
+    .page-left
+        width: 100%
+        position: static
+        .page-left-search
+            width: 100%
+            svg
+                left: 70px
+            input
+                width: 100%
+        .page-left-weather-info
+            margin: 0 auto
+            align-items: center
+            text-align: center
+
+            .weather-graus
+                align-items: center
+                text-align: center
+
+            .weather-city
+                display: flex
+                flex-direction: column
+                align-items: center
+
+    .main
+        flex-direction: column
