@@ -9,6 +9,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { IoCloudSharp } from "react-icons/io5";
 
 import "./styles/app.sass";
+import Footer from "./componentes/Footer";
 
 function App() {
   const [weather, setWeather] = useState([]);
@@ -177,6 +178,9 @@ function App() {
               {weather2 && weather2.map((item) => <Forecast item={item} />)}
             </div>
           </div>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       </div>
     </main>

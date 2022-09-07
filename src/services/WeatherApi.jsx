@@ -1,5 +1,8 @@
+// Api base para informações sobre a cidade
 const API_BASE = "https://api.openweathermap.org/data/2.5/weather?";
 const API_KEY = "fa6f536b0cc2881dba96408707654b76";
+
+// Api base para informações climáticas sobre a cidade
 const API_BASE2 = "https://api.openweathermap.org/data/2.5/onecall?";
 const API_KEY2 = "a5bb4718b30b6f58f58697997567fffa";
 
