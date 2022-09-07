@@ -5,13 +5,13 @@ const API_KEY2 = "a5bb4718b30b6f58f58697997567fffa";
 
 const getWeather = async (city) => {
   const response = await fetch(
-    `${API_BASE}q=${city}&appid=${API_KEY}&units=metric`
+    `${API_BASE}q=${city}&lang=pt_br&appid=${API_KEY}&units=metric`
   );
   const data = await response.json();
   if (data.cod == 404) {
     document.querySelector("#alert-error").innerText = "Cidade não encontrada";
     const response = await fetch(
-      `${API_BASE}q=${"Sao Paulo"}&appid=${API_KEY}&units=metric`
+      `${API_BASE}q=${"Sao Paulo"}&lang=pt_br&appid=${API_KEY}&units=metric`
     );
     const data = await response.json();
     return data;
@@ -24,7 +24,7 @@ const getWeather = async (city) => {
 
 const getWeather2 = async (lon, lat) => {
   const response = await fetch(
-    `${API_BASE2}appid=${API_KEY2}&exclude=minutely&units=metric&lon=${lon}&lat=${lat}`
+    `${API_BASE2}appid=${API_KEY2}&lang=pt_br&exclude=minutely&units=metric&lon=${lon}&lat=${lat}`
   );
   const data = await response.json();
   return data;

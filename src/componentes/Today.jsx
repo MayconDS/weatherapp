@@ -47,26 +47,32 @@ const Today = ({ item }) => {
               <Card3
                 icon={
                   item["weather"].map((item) => item.description) ==
-                  "light rain"
+                  "chuva leve"
                     ? "https://hweather.netlify.app/weather_icons/10d.png"
                     : item["weather"].map((item) => item.description) ==
-                      "overcast clouds"
+                      "nuvens nubladas"
+                    ? "https://hweather.netlify.app/weather_icons/04n.png"
+                    : item["weather"].map((item) => item.description) ==
+                      "nublado"
                     ? "https://hweather.netlify.app/weather_icons/04d.png"
                     : item["weather"].map((item) => item.description) ==
-                      "broken clouds"
-                    ? "https://hweather.netlify.app/weather_icons/04d.png"
-                    : item["weather"].map((item) => item.description) ==
-                      "moderate rain"
+                      "chuva moderada"
                     ? "https://hweather.netlify.app/weather_icons/10d.png"
                     : item["weather"].map((item) => item.description) ==
-                      "few clouds"
+                      "algumas nuvens"
                     ? "https://hweather.netlify.app/weather_icons/02d.png"
                     : item["weather"].map((item) => item.description) ==
-                      "clear sky"
+                      "céu limpo"
                     ? "https://hweather.netlify.app/weather_icons/01d.png"
                     : item["weather"].map((item) => item.description) ==
-                      "scattered clouds"
+                      "nuvens dispersas"
                     ? "https://hweather.netlify.app/weather_icons/03d.png "
+                    : item["weather"].map((item) => item.description) ==
+                      "nublado"
+                    ? "https://hweather.netlify.app/weather_icons/50d.png"
+                    : item["weather"].map((item) => item.description) ==
+                      "chuva forte"
+                    ? "https://hweather.netlify.app/weather_icons/10n.png"
                     : ""
                 }
                 day={dayFormatter.format(item.dt * 1000)}

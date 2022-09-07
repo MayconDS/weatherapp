@@ -82,28 +82,28 @@ function App() {
                 <img
                   src={
                     item["weather"].map((item) => item.description) ==
-                    "light rain"
+                    "chuva leve"
                       ? "https://hweather.netlify.app/weather_icons/10d.png"
                       : item["weather"].map((item) => item.description) ==
-                        "overcast clouds"
+                        "nuvens nubladas"
                       ? "https://hweather.netlify.app/weather_icons/04n.png"
                       : item["weather"].map((item) => item.description) ==
-                        "broken clouds"
+                        "nublado"
                       ? "https://hweather.netlify.app/weather_icons/04d.png"
                       : item["weather"].map((item) => item.description) ==
-                        "moderate rain"
+                        "chuva moderada"
                       ? "https://hweather.netlify.app/weather_icons/10d.png"
                       : item["weather"].map((item) => item.description) ==
-                        "few clouds"
+                        "algumas nuvens"
                       ? "https://hweather.netlify.app/weather_icons/02d.png"
                       : item["weather"].map((item) => item.description) ==
-                        "clear sky"
+                        "céu limpo"
                       ? "https://hweather.netlify.app/weather_icons/01d.png"
                       : item["weather"].map((item) => item.description) ==
-                        "scattered clouds"
+                        "nuvens dispersas"
                       ? "https://hweather.netlify.app/weather_icons/03d.png "
                       : item["weather"].map((item) => item.description) ==
-                        "smoke"
+                        "nublado"
                       ? "https://hweather.netlify.app/weather_icons/50d.png"
                       : ""
                   }
@@ -117,7 +117,7 @@ function App() {
                       <span id="temp">°C</span>
                     </h2>
                   </div>
-                  <span id="gray">Feels like {item["main"].feels_like}°C</span>
+                  <span id="gray">Sensação {item["main"].feels_like}°C</span>
                   <div style={{ display: "flex" }} className="descriptionTemp">
                     <span
                       style={{
@@ -161,14 +161,14 @@ function App() {
       <div style={{ overflow: "hidden" }} className="page-right">
         <div className="page-content">
           <div className="today">
-            <h1>Today</h1>
+            <h1>Hoje</h1>
 
             {weather2 && weather2.map((item) => <Today item={item} />)}
           </div>
 
           <br />
           <div className="highlights">
-            <h1>Highlights</h1>
+            <h1>Destaques</h1>
             <div className="highlights-item">
               {weather2 && weather2.map((item) => <Highlights item={[item]} />)}
             </div>
@@ -176,7 +176,7 @@ function App() {
 
           <br />
           <div className="week">
-            <h1>This Week</h1>
+            <h1>Essa Semana</h1>
             <div className="week-item">
               {weather2 && weather2.map((item) => <Forecast item={item} />)}
             </div>

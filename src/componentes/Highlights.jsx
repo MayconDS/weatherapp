@@ -31,13 +31,13 @@ const Highlights = ({ item }) => {
             <Card
               fullWidth={true}
               icon="https://hweather.netlify.app/weather_icons/humidity.png"
-              day={"humidty"}
+              day={"Umidade"}
               graus={item["current"].humidity + "%"}
             />
             <Card
               fullWidth={true}
               icon="https://hweather.netlify.app/weather_icons/wind-night.png"
-              day={"Wind Speed"}
+              day={"Vel. Vento"}
               graus={item["current"].wind_speed + " m/s"}
             />
             <Card2
@@ -46,26 +46,25 @@ const Highlights = ({ item }) => {
               hoursSs={formatter.format(sunset)}
               icon="https://hweather.netlify.app/weather_icons/sunrise.png"
               icon2="https://hweather.netlify.app/weather_icons/sunset.png"
-              day={"humidty"}
               graus={item["current"].humidity + "%"}
             />
             <Card
               fullWidth={true}
               icon="https://hweather.netlify.app/weather_icons/clouds.png"
-              day={"Clouds"}
+              day={"Nuvens"}
               graus={item["current"].clouds + "%"}
             />
             <Card
               fullWidth={true}
               hoursSr={formatter.format(sunrise)}
               hoursSs={formatter.format(sunset)}
-              day={"UV Index"}
+              day={"Índc. Ultravioleta"}
               icon="https://hweather.netlify.app/weather_icons/uv.png"
               graus={item["current"].uvi}
             />
             <Card
               fullWidth={true}
-              day={"Pressure"}
+              day={"Pressão"}
               icon="https://hweather.netlify.app/weather_icons/pressure.png"
               graus={item["current"].pressure + " hpa"}
             />
