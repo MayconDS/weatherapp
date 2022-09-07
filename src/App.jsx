@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Forecast from "./componentes/Forecast";
 import Highlights from "./componentes/Highlights";
 import Today from "./componentes/Today";
-import { getWeather, getWeather2 } from "./services/hgApi";
+import { getWeather, getWeather2 } from "./services/WeatherApi";
 
 import { HiSearch } from "react-icons/hi";
 import { IoLocationSharp } from "react-icons/io5";
@@ -33,10 +33,6 @@ function App() {
 
     loadWeather();
   }, [buttonClicked]);
-
-  // weather.map((item) => {
-  //   console.log(item["coord"].lat);
-  // });
 
   let dt = weather.map((item) => item.dt);
   let sunr = weather.map((item) => item["sys"].sunrise);
